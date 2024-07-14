@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <header className="flex items-center justify-between gap-4 min-h-8 sticky top-0 shadow-lg py-4 px-8 bg-white">
+    <header className="flex flex-wrap items-center justify-between gap-4 min-h-8 sticky top-0 shadow-lg py-4 px-8 bg-white">
       <img className="h-10 px-8" src="/myntra.svg" alt="logo" />
       <div className="flex items-center gap-8">
         <h2 className="text-sm font-semibold">MEN</h2>
