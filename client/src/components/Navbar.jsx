@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -9,8 +9,12 @@ const Navbar = () => {
         <h2 className="text-sm font-semibold">WOMEN</h2>
         <h2 className="text-sm font-semibold">KIDS</h2>
         <h2 className="text-sm font-semibold">HOME & LIVING</h2>
-        <h2 className="text-sm font-semibold">PIN IT</h2>
-        <img className="h-7" src="/gen.svg" alt="genOption" />
+        <Link to={"/"} className="text-sm font-semibold">
+          PIN IT
+        </Link>
+        <Link to={"/genai"}>
+          <img className="h-7" src="/gen.svg" alt="genOption" />
+        </Link>
       </div>
 
       <input
@@ -22,9 +26,15 @@ const Navbar = () => {
         required
       />
       <div className="flex items-center gap-6 px-8">
-        <img className="h-5" src="/profile-button.svg" alt="profile" />
-        <img className="h-5" src="/wishlist.svg" alt="wishlist" />
-        <img className="h-5" src="/cart.svg" alt="cart" />
+        <a href="#">
+          <img className="h-5" src="/profile-button.svg" alt="profile" />
+        </a>
+        <a href="#">
+          <img className="h-5" src="/wishlist.svg" alt="wishlist" />
+        </a>
+        <Link to={"/cart"}>
+          <img className="h-5" src="/cart.svg" alt="cart" />
+        </Link>
       </div>
     </header>
   );
